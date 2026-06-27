@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel Creative — Ad Studio Meets Consumer Research Lab</title>
+  <meta name="description" content="Carousel Creative is an ad studio and consumer research lab. We study customers and turn what resonates into better Meta advertising." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles-b.css" />
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand" aria-label="Carousel Creative — home"><img class="nav__logo" src="carousel-logo.png" alt="" aria-hidden="true" width="505" height="530" decoding="async" /><span class="nav__brand-text">Carousel&nbsp;Creative</span></a>
+      <nav class="nav__right" aria-label="Primary">
+        <a href="#work" class="nav__link">Work</a>
+        <a href="#founder" class="nav__link">About</a>
+        <a href="https://form.typeform.com/to/blMRAYgL" target="_blank" rel="noopener" class="cta nav__cta"><span class="cta__label">Request a Call</span><span class="cta__arrow" aria-hidden="true">&rarr;</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero__field" aria-hidden="true">
+        <svg class="hero__rings" id="heroRings" preserveAspectRatio="none"></svg>
+        <canvas class="hero__dots" id="heroDots"></canvas>
+        <svg class="hero__blobs" id="heroBlobs" preserveAspectRatio="none"></svg>
+        <div class="hero__veil"></div>
+      </div>
+
+      <div class="wrap hero__inner">
+        <p class="label hero__label reveal">Meta Ads&nbsp;x&nbsp;Consumer Research</p>
+        <h1 class="hero__title">
+          <span class="line reveal">Ads people</span>
+          <span class="line reveal">connect with.</span>
+        </h1>
+        <div class="hero__actions reveal">
+          <a href="https://form.typeform.com/to/blMRAYgL" target="_blank" rel="noopener" class="cta"><span class="cta__label">Request a Call</span><span class="cta__arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+
+      <div class="hero__logos reveal" aria-label="Selected clients">
+        <span class="logos__item logos__item--cerebras" role="img" aria-label="Cerebras">
+          <svg class="logos__svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="78 158 644 283" fill="currentColor" preserveAspectRatio="xMidYMid meet"><style type="text/css"> .st0{fill-rule:evenodd;clip-rule:evenodd;fill:currentColor;} .st1{fill-rule:evenodd;clip-rule:evenodd;fill:currentColor;} </style><g><g transform="translate(-234.000000, -1114.000000)"><g transform="translate(-6.000000, 1027.000000)"><g transform="translate(190.000000, 36.000000)"><g transform="translate(50.000000, 51.000000)"><g><path class="st0" d="M220.9,421c-17,0-33.1-3.4-47.8-9.5c-22-9.2-40.8-24.6-54.1-44c-13.3-19.4-21-42.7-21-67.9 c0-16.8,3.4-32.7,9.7-47.3c9.3-21.8,24.9-40.3,44.5-53.4c19.6-13.1,43.2-20.7,68.7-20.7v-18.3c-19.5,0-38.1,3.9-55.1,11 c-25.4,10.6-47,28.3-62.2,50.6c-15.3,22.3-24.2,49.2-24.2,78.1c0,19.3,4,37.7,11.1,54.4c10.7,25.1,28.7,46.4,51.2,61.5 c22.6,15.1,49.8,23.9,79.1,23.9V421z"/><path class="st0" d="M157.9,374.1c-11.5-9.6-20.1-21.2-25.9-33.9c-5.8-12.7-8.8-26.4-8.8-40.2 c0-11,1.9-22,5.6-32.5c3.8-10.5,9.4-20.5,17.1-29.6c9.6-11.4,21.3-20,34-25.8c12.7-5.8,26.6-8.7,40.4-8.7 c11,0,22.1,1.9,32.6,5.6c10.6,3.8,20.6,9.4,29.7,17l11.9-14.1c-10.8-9-22.8-15.8-35.4-20.2c-12.6-4.5-25.7-6.7-38.8-6.7 c-16.5,0-32.9,3.5-48.1,10.4c-15.2,6.9-29.1,17.2-40.5,30.7c-9.1,10.8-15.8,22.7-20.3,35.2c-4.5,12.5-6.7,25.6-6.7,38.7 c0,16.4,3.5,32.8,10.4,47.9c6.9,15.1,17.3,29,30.9,40.3L157.9,374.1z"/><path class="st0" d="M186.4,362.2c-12.1-6.4-21.6-15.7-28.1-26.6c-6.5-10.9-9.9-23.5-9.9-36.2 c0-11.2,2.6-22.5,8.3-33c6.4-12.1,15.8-21.5,26.8-27.9c11-6.5,23.6-9.9,36.4-9.9c11.2,0,22.6,2.6,33.2,8.2l8.6-16.3 c-13.3-7-27.7-10.4-41.9-10.3c-16.1,0-32,4.3-45.8,12.4c-13.8,8.1-25.7,20.1-33.7,35.2c-7,13.3-10.4,27.6-10.4,41.6 c0,16,4.3,31.8,12.5,45.5c8.2,13.8,20.2,25.5,35.4,33.5L186.4,362.2z"/><path class="st0" d="M221,344.6c-6.3,0-12.3-1.3-17.7-3.6c-8.2-3.4-15.1-9.2-20-16.5c-4.9-7.3-7.8-16-7.8-25.4 c0-6.3,1.3-12.3,3.6-17.7c3.4-8.1,9.2-15.1,16.5-20c7.3-4.9,16-7.8,25.4-7.8v-18.4c-8.8,0-17.2,1.8-24.9,5 c-11.5,4.9-21.2,12.9-28.1,23.1C161,273.6,157,286,157,299.2c0,8.8,1.8,17.2,5,24.9c4.9,11.5,13,21.2,23.2,28.1 C195.4,359,207.7,363,221,363V344.6z"/></g><g transform="translate(22.000000, 13.000000)"><path class="st1" d="M214,271.6c-2.1-2.2-4.4-4-6.7-5.3c-2.3-1.3-4.7-2-7.2-2c-3.4,0-6.3,0.6-9,1.8 c-2.6,1.2-4.9,2.8-6.8,4.9c-1.9,2-3.3,4.4-4.3,7c-1,2.6-1.4,5.4-1.4,8.2c0,2.8,0.5,5.6,1.4,8.2c1,2.6,2.4,5,4.3,7 c1.9,2,4.1,3.7,6.8,4.9c2.6,1.2,5.6,1.8,9,1.8c2.8,0,5.5-0.6,7.9-1.7c2.4-1.2,4.5-2.9,6.2-5.1l12.2,13.1 c-1.8,1.8-3.9,3.4-6.3,4.7c-2.4,1.3-4.8,2.4-7.2,3.2s-4.8,1.4-7,1.7c-2.2,0.4-4.2,0.5-5.8,0.5c-5.5,0-10.7-0.9-15.5-2.7 c-4.9-1.8-9.1-4.4-12.6-7.8c-3.6-3.3-6.4-7.4-8.5-12.1c-2.1-4.7-3.1-10-3.1-15.7c0-5.8,1-11,3.1-15.7 c2.1-4.7,4.9-8.7,8.5-12.1c3.6-3.3,7.8-5.9,12.6-7.8c4.9-1.8,10.1-2.7,15.5-2.7c4.7,0,9.4,0.9,14.1,2.7 c4.7,1.8,8.9,4.6,12.4,8.4L214,271.6z"/><path class="st1" d="M280.4,278.9c-0.1-5.4-1.8-9.6-5-12.7c-3.3-3.1-7.8-4.6-13.6-4.6c-5.5,0-9.8,1.6-13,4.7 c-3.2,3.1-5.2,7.4-5.9,12.6H280.4z M243,292.6c0.6,5.5,2.7,9.7,6.4,12.8c3.7,3,8.1,4.6,13.3,4.6c4.6,0,8.4-0.9,11.5-2.8 c3.1-1.9,5.8-4.2,8.2-7.1l13.1,9.9c-4.3,5.3-9,9-14.3,11.3c-5.3,2.2-10.8,3.3-16.6,3.3c-5.5,0-10.7-0.9-15.5-2.7 c-4.9-1.8-9.1-4.4-12.6-7.8c-3.6-3.3-6.4-7.4-8.5-12.1c-2.1-4.7-3.1-10-3.1-15.7c0-5.8,1-11,3.1-15.7 c2.1-4.7,4.9-8.7,8.5-12.1c3.6-3.3,7.8-5.9,12.6-7.8c4.9-1.8,10.1-2.7,15.5-2.7c5.1,0,9.7,0.9,13.9,2.7 c4.2,1.8,7.8,4.3,10.8,7.7c3,3.3,5.3,7.5,7,12.4c1.7,4.9,2.5,10.6,2.5,17v5H243z"/><path class="st1" d="M306.5,249.7h18.3v11.5h0.3c2-4.3,4.9-7.5,8.7-9.9c3.8-2.3,8.1-3.5,12.9-3.5 c1.1,0,2.2,0.1,3.3,0.3c1.1,0.2,2.2,0.5,3.3,0.8v17.6c-1.5-0.4-3-0.7-4.5-1c-1.5-0.3-2.9-0.4-4.3-0.4c-4.3,0-7.7,0.8-10.3,2.4 c-2.6,1.6-4.6,3.4-5.9,5.4c-1.4,2-2.3,4.1-2.7,6.1c-0.5,2-0.7,3.5-0.7,4.6v39h-18.3V249.7z"/><path class="st1" d="M409,278.9c-0.1-5.4-1.8-9.6-5-12.7c-3.3-3.1-7.8-4.6-13.6-4.6c-5.5,0-9.8,1.6-13,4.7 c-3.2,3.1-5.2,7.4-5.9,12.6H409z M371.6,292.6c0.6,5.5,2.7,9.7,6.4,12.8c3.7,3,8.1,4.6,13.3,4.6c4.6,0,8.4-0.9,11.5-2.8 c3.1-1.9,5.8-4.2,8.2-7.1l13.1,9.9c-4.3,5.3-9,9-14.3,11.3c-5.3,2.2-10.8,3.3-16.6,3.3c-5.5,0-10.7-0.9-15.5-2.7 c-4.9-1.8-9.1-4.4-12.6-7.8c-3.6-3.3-6.4-7.4-8.5-12.1c-2.1-4.7-3.1-10-3.1-15.7c0-5.8,1-11,3.1-15.7 c2.1-4.7,4.9-8.7,8.5-12.1c3.6-3.3,7.8-5.9,12.6-7.8c4.9-1.8,10.1-2.7,15.5-2.7c5.1,0,9.7,0.9,13.9,2.7 c4.2,1.8,7.8,4.3,10.8,7.7c3,3.3,5.3,7.5,7,12.4c1.7,4.9,2.5,10.6,2.5,17v5H371.6z"/><path class="st1" d="M494.6,286.2c0-2.8-0.5-5.6-1.5-8.2c-1-2.6-2.4-5-4.3-7c-1.9-2-4.2-3.7-6.9-4.9 c-2.7-1.2-5.7-1.8-9.1-1.8c-3.4,0-6.4,0.6-9.1,1.8c-2.7,1.2-5,2.8-6.9,4.9c-1.9,2-3.3,4.4-4.3,7c-1,2.6-1.5,5.4-1.5,8.2 c0,2.8,0.5,5.6,1.5,8.2c1,2.6,2.4,5,4.3,7c1.9,2,4.2,3.7,6.9,4.9c2.7,1.2,5.7,1.8,9.1,1.8c3.4,0,6.4-0.6,9.1-1.8 c2.7-1.2,5-2.8,6.9-4.9c1.9-2,3.3-4.4,4.3-7C494.1,291.8,494.6,289,494.6,286.2L494.6,286.2z M433.2,207.6h18.5v51.3h0.5 c0.9-1.2,2.1-2.5,3.5-3.7c1.4-1.3,3.2-2.5,5.2-3.6c2.1-1.1,4.4-2,7.1-2.7c2.7-0.7,5.8-1.1,9.3-1.1c5.2,0,10.1,1,14.5,3 c4.4,2,8.2,4.7,11.3,8.1c3.1,3.5,5.6,7.5,7.3,12.2c1.7,4.7,2.6,9.7,2.6,15.1c0,5.4-0.8,10.4-2.5,15.1 c-1.6,4.7-4.1,8.7-7.2,12.2c-3.2,3.5-7,6.2-11.6,8.1c-4.5,2-9.6,3-15.3,3c-5.2,0-10.1-1-14.7-3c-4.5-2-8.1-5.3-10.8-9.7h-0.3 v11h-17.6V207.6z"/><path class="st1" d="M520.9,249.7h18.3v11.5h0.3c2-4.3,4.9-7.5,8.7-9.9c3.8-2.3,8.1-3.5,12.9-3.5 c1.1,0,2.2,0.1,3.3,0.3c1.1,0.2,2.2,0.5,3.3,0.8v17.6c-1.5-0.4-3-0.7-4.5-1c-1.5-0.3-2.9-0.4-4.3-0.4c-4.3,0-7.7,0.8-10.3,2.4 c-2.6,1.6-4.6,3.4-5.9,5.4c-1.4,2-2.3,4.1-2.7,6.1c-0.5,2-0.7,3.5-0.7,4.6v39h-18.3V249.7z"/><path class="st1" d="M616,290h-3.9c-2.6,0-5.5,0.1-8.7,0.3c-3.2,0.2-6.2,0.7-9.1,1.4c-2.8,0.8-5.2,1.9-7.2,3.3 c-2,1.5-2.9,3.5-2.9,6.2c0,1.7,0.4,3.2,1.2,4.3c0.8,1.2,1.8,2.2,3,3c1.2,0.8,2.6,1.4,4.2,1.8c1.5,0.4,3.1,0.5,4.6,0.5 c6.4,0,11.1-1.5,14.2-4.5c3-3,4.6-7.1,4.6-12.2V290z M617.1,312.7h-0.5c-2.7,4.2-6.1,7.2-10.2,9.1c-4.1,1.9-8.7,2.8-13.6,2.8 c-3.4,0-6.7-0.5-10-1.4s-6.1-2.3-8.7-4.1c-2.5-1.8-4.6-4.1-6.1-6.8s-2.3-5.9-2.3-9.6c0-4,0.7-7.3,2.2-10.1 c1.4-2.8,3.4-5.1,5.8-7c2.4-1.9,5.2-3.4,8.4-4.5c3.2-1.1,6.5-2,10-2.5c3.5-0.6,6.9-0.9,10.5-1.1c3.5-0.2,6.8-0.2,9.9-0.2h4.6 v-2c0-4.6-1.6-8-4.8-10.3c-3.2-2.3-7.3-3.4-12.2-3.4c-3.9,0-7.6,0.7-11,2.1c-3.4,1.4-6.4,3.2-8.8,5.6l-9.8-9.6 c4.1-4.2,9-7.1,14.5-9c5.5-1.8,11.2-2.7,17.1-2.7c5.3,0,9.7,0.6,13.3,1.7c3.6,1.2,6.6,2.7,9,4.5c2.4,1.8,4.2,3.9,5.5,6.3 c1.3,2.4,2.2,4.8,2.8,7.2c0.6,2.4,0.9,4.8,1,7.1c0.1,2.3,0.2,4.3,0.2,6v42h-16.7V312.7z"/><path class="st1" d="M683.6,269.9c-3.6-5-8.4-7.5-14.4-7.5c-2.5,0-4.9,0.6-7.2,1.8c-2.4,1.2-3.5,3.2-3.5,5.9 c0,2.2,1,3.9,2.9,4.9c1.9,1,4.4,1.9,7.4,2.6c3,0.7,6.2,1.4,9.6,2.2c3.4,0.8,6.6,1.9,9.6,3.5c3,1.6,5.4,3.7,7.4,6.5 c1.9,2.7,2.9,6.5,2.9,11.3c0,4.4-0.9,8-2.8,11c-1.9,3-4.3,5.4-7.4,7.2c-3,1.8-6.4,3.1-10.2,4c-3.8,0.8-7.6,1.2-11.3,1.2 c-5.7,0-11-0.8-15.8-2.4c-4.8-1.6-9.1-4.6-12.9-8.8l12.3-11.4c2.4,2.6,4.9,4.8,7.6,6.5c2.7,1.7,6,2.5,9.9,2.5 c1.3,0,2.7-0.2,4.1-0.5c1.4-0.3,2.8-0.8,4-1.5c1.2-0.7,2.2-1.6,3-2.7c0.8-1.1,1.1-2.3,1.1-3.7c0-2.5-1-4.4-2.9-5.6 c-1.9-1.2-4.4-2.2-7.4-3c-3-0.8-6.2-1.5-9.6-2.1c-3.4-0.7-6.6-1.7-9.6-3.2c-3-1.5-5.4-3.5-7.4-6.2c-1.9-2.6-2.9-6.3-2.9-11 c0-4.1,0.8-7.6,2.5-10.6c1.7-3,3.9-5.4,6.7-7.4c2.8-1.9,5.9-3.3,9.5-4.3c3.6-0.9,7.2-1.4,10.9-1.4c4.9,0,9.8,0.8,14.6,2.5 c4.8,1.7,8.7,4.5,11.7,8.6L683.6,269.9z"/></g></g></g></g></g></g></svg>
+        </span>
+        <img class="logos__item logos__png logos__item--article" src="logos/article-trim.png" alt="Article" loading="lazy" decoding="async" />
+        <span class="logos__item logos__item--cuddle" role="img" aria-label="cuddle+kind">
+          <svg class="logos__svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194 23" fill="currentColor" preserveAspectRatio="xMidYMid meet"><title>cuddle+kind logo copy</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-47.000000, -244.000000)" fill="currentColor" fill-rule="nonzero"><path d="M56.0478012,267 C60.0864391,267 63.6554679,265.092558 64.5007642,260.902441 L63.0606298,260.902441 C62.3405626,264.217012 59.27245,265.749219 56.0478012,265.749219 C50.2559561,265.749219 48.4401344,261.246406 48.4401344,258.651035 C48.4401344,254.836151 50.9760234,251.240155 56.0478012,251.240155 C59.8985955,251.240155 62.6536353,253.491561 62.8414789,255.524081 L64.2816133,255.524081 C64.0937697,252.803632 60.9630427,249.989374 56.0478012,249.989374 C51.1325597,249.989374 47,253.022518 47,258.651035 C47,263.62289 50.7881797,267 56.0478012,267 Z M74.425169,267 C78.0881196,267 80.1857068,265.217637 81.1875394,263.310195 L81.250154,263.310195 L81.250154,266.499687 L82.6902884,266.499687 L82.6902884,250.489686 L81.250154,250.489686 L81.250154,259.839277 C81.250154,262.809882 79.1838741,265.749219 74.4564763,265.749219 C69.7290784,265.749219 68.5080949,263.560351 68.5080949,260.30832 L68.5080949,250.489686 L67.0679604,250.489686 L67.0681591,260.552572 C67.0745819,262.586774 67.2886767,267 74.425169,267 Z M93.8043694,267 C97.9369291,267 100.159745,264.904941 100.91112,262.9975 L100.973734,262.9975 L100.973734,266.499687 L102.413869,266.499687 L102.413869,244.17324 L100.973734,244.17324 L100.973734,253.898065 L100.91112,253.898065 C99.9719017,252.146971 97.7490855,249.989374 93.8043694,249.989374 C88.9204352,249.989374 85.2574846,253.366483 85.2574846,258.463417 C85.2574846,262.9975 88.1690607,267 93.8043694,267 Z M93.6478331,265.749219 C89.6718097,265.749219 86.697619,263.028769 86.697619,258.432148 C86.697619,253.554101 90.1414188,251.240155 93.8356767,251.240155 C97.0916328,251.240155 101.161578,253.022518 101.161578,258.651035 C101.161578,261.496562 99.658829,265.749219 93.6478331,265.749219 Z M113.52795,267 C117.66051,267 119.883326,264.904941 120.6347,262.9975 L120.697315,262.9975 L120.697315,266.499687 L122.137449,266.499687 L122.137449,244.17324 L120.697315,244.17324 L120.697315,253.898065 L120.6347,253.898065 C119.695482,252.146971 117.472666,249.989374 113.52795,249.989374 C108.644016,249.989374 104.981065,253.366483 104.981065,258.463417 C104.981065,262.9975 107.892641,267 113.52795,267 Z M113.371414,265.749219 C109.39539,265.749219 106.421199,263.028769 106.421199,258.432148 C106.421199,253.554101 109.864999,251.240155 113.559257,251.240155 C116.815213,251.240155 120.885158,253.022518 120.885158,258.651035 C120.885158,261.496562 119.382409,265.749219 113.371414,265.749219 Z M127.209227,266.499687 L127.209227,244.17324 L125.769093,244.17324 L125.769093,266.499687 L127.209227,266.499687 Z M138.824224,267 C143.082013,267 145.899668,265.217637 147.24588,261.183867 L145.805746,261.183867 C145.242215,262.622265 143.958617,265.749219 138.980761,265.749219 C134.159441,265.749219 131.435709,262.809882 131.341787,258.807382 L147.684182,258.807382 C147.621567,253.679179 144.428226,249.989374 138.855532,249.989374 C132.030547,249.989374 129.901652,255.023769 129.901652,258.369609 C129.901652,263.685429 133.345452,267 138.824224,267 Z M146.056204,257.556601 L131.341787,257.556601 C131.967932,253.741718 134.566436,251.240155 138.698995,251.240155 C142.393253,251.240155 145.461366,253.178866 146.056204,257.556601 Z M165.580785,266.499687 L165.580785,259.213886 L172.875379,259.213886 L172.875379,257.963105 L165.580785,257.963105 L165.580785,250.677303 L164.328494,250.677303 L164.328494,257.963105 L157.0339,257.963105 L157.0339,259.213886 L164.328494,259.213886 L164.328494,266.499687 L165.580785,266.499687 Z M184.490377,266.499687 L184.490377,260.621015 L188.81078,257.431523 L196.825441,266.499687 L198.797799,266.499687 L189.937842,256.524706 L198.046425,250.489686 L195.91753,250.489686 L184.490377,258.994999 L184.490377,244.17324 L183.050242,244.17324 L183.050242,266.499687 L184.490377,266.499687 Z M202.022448,266.499687 L202.022448,250.489686 L200.582314,250.489686 L200.582314,266.499687 L202.022448,266.499687 Z M207.094226,266.499687 L207.094226,257.150097 C207.094226,254.179491 209.160506,251.240155 213.887904,251.240155 C218.615302,251.240155 219.836285,253.429022 219.836285,256.681054 L219.836285,266.499687 L221.27642,266.499687 L221.27642,256.618515 C221.27642,254.679804 221.27642,249.989374 213.919211,249.989374 C210.25626,249.989374 208.158673,251.771737 207.156841,253.679179 L207.094226,253.679179 L207.094226,250.489686 L205.654092,250.489686 L205.654092,266.499687 L207.094226,266.499687 Z M232.390501,267 C236.52306,267 238.745877,264.904941 239.497251,262.9975 L239.559866,262.9975 L239.559866,266.499687 L241,266.499687 L241,244.17324 L239.559866,244.17324 L239.559866,253.898065 L239.497251,253.898065 C238.558033,252.146971 236.335217,249.989374 232.390501,249.989374 C227.506566,249.989374 223.843616,253.366483 223.843616,258.463417 C223.843616,262.9975 226.755192,267 232.390501,267 Z M232.421808,251.240155 C235.677764,251.240155 239.747709,253.022518 239.747709,258.651035 C239.747709,261.496562 238.24496,265.749219 232.233964,265.749219 C228.257941,265.749219 225.28375,263.028769 225.28375,258.432148 C225.28375,253.554101 228.72755,251.240155 232.421808,251.240155 Z M201.608469,244.348709 C202.134203,243.769968 203.077209,243.93716 203.375806,244.661228 L203.375806,244.661228 L203.423107,244.794381 C203.582625,245.328694 203.388272,245.880541 202.925358,246.34472 L202.925358,246.34472 L201.318804,247.953619 L199.713526,246.34472 C199.212036,245.841859 199.024456,245.236111 199.261802,244.661228 C199.560399,243.93716 200.50468,243.769968 201.030415,244.348709 L201.030415,244.348709 L201.318804,244.667659 Z"></path></g></g></svg>
+        </span>
+        <img class="logos__item logos__png logos__item--dove" src="logos/dove-dental-alpha.png" alt="Dove Dental Products" loading="lazy" decoding="async" />
+        <span class="logos__item logos__item--fifty" role="img" aria-label="Fifty/Fifty">
+          <svg class="logos__svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="currentColor" preserveAspectRatio="xMidYMid meet"><g><g><path d="M231.51,179.44H20.46v52.53h263.89c-.18-29.04-23.76-52.53-52.84-52.53Z"/><path d="M231.51,149.59H20.46v-52.53h263.89c-.18,29.04-23.76,52.53-52.84,52.53Z"/><path d="M231.13,261.63v8.56c0,43.47-35.24,78.72-78.72,78.72h0c-43.47,0-78.72-35.24-78.72-78.72v-8.56H20.46v10.13c0,72.88,59.08,131.96,131.96,131.96h0c72.88,0,131.96-59.08,131.96-131.96v-10.13h-53.24Z"/></g><g><path d="M368.49,314.19h211.05v-52.53h-263.89c.18,29.04,23.76,52.53,52.84,52.53Z"/><path d="M368.49,344.05h211.05v52.53h-263.89c.18-29.04,23.76-52.53,52.84-52.53Z"/><path d="M368.87,232.01v-8.56c0-43.47,35.24-78.72,78.72-78.72h0c43.47,0,78.72,35.24,78.72,78.72v8.56h53.24v-10.13c0-72.88-59.08-131.96-131.96-131.96h0c-72.88,0-131.96,59.08-131.96,131.96v10.13h53.24Z"/></g></g><g><g><path d="M98.5,447.18v62.89h-13.96v-62.89h13.96Z"/><path d="M160.26,459.17h-34.11v13.06h28.68l-4.9,11.81h-23.78v26.04h-13.69v-62.89h52.78l-4.97,11.99Z"/><path d="M73.86,459.17h-34.11v13.06h28.68l-4.9,11.81h-23.78v26.04h-13.69v-62.89h52.78l-4.97,11.99Z"/><path d="M220.61,459.17h-15.38v50.91h-13.69v-50.91h-17.81l-4.9-11.99h59.03l-7.25,11.99Z"/><path d="M247.91,447.18l16.01,26.84,15.93-26.84h15.74l-24.87,40.35v22.55h-13.69v-22.55l-25.05-40.35h15.93Z"/></g><g><path d="M382.43,447.18v62.89h-13.96v-62.89h13.96Z"/><path d="M444.18,459.17h-34.11v13.06h28.68l-4.9,11.81h-23.78v26.04h-13.69v-62.89h52.78l-4.97,11.99Z"/><path d="M357.79,459.17h-34.11v13.06h28.68l-4.9,11.81h-23.78v26.04h-13.69v-62.89h52.78l-4.97,11.99Z"/><path d="M504.54,459.17h-15.38v50.91h-13.69v-50.91h-17.81l-4.9-11.99h59.03l-7.25,11.99Z"/><path d="M531.83,447.18l16.01,26.84,15.93-26.84h15.74l-24.87,40.35v22.55h-13.69v-22.55l-25.05-40.35h15.93Z"/></g></g></svg>
+        </span>
+        <img class="logos__item logos__png logos__item--snug" src="logos/perfectly-snug.png" alt="Perfectly Snug" loading="lazy" decoding="async" />
+        <span class="logos__item logos__item--zlumber" role="img" aria-label="Zlumber">
+          <svg class="logos__svg" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210.81 43.87" fill="currentColor" preserveAspectRatio="xMidYMid meet"><defs><style> .cls-1 { fill:currentColor; } </style></defs><g><g><g><path class="cls-1" d="M17.24,19.57H0s0-6.5,0-6.5h26.38v6.5l-17.24,16.81h17.24v6.56H4.62C2.07,42.95,0,40.88,0,38.33H0c0-1.24.5-2.44,1.39-3.31l15.85-15.45Z"/><path class="cls-1" d="M29.41,0h6.75v38.17c0,2.64-2.14,4.77-4.77,4.77h-1.98V0Z"/><path class="cls-1" d="M39.59,29.33V13.07h6.75v15.09c0,1.27.14,2.46.43,3.59.29,1.13.74,2.1,1.35,2.91.61.82,1.42,1.46,2.42,1.93,1,.47,2.22.71,3.65.71s2.65-.23,3.65-.71c1-.47,1.81-1.11,2.42-1.93.61-.82,1.06-1.79,1.35-2.91.29-1.12.43-2.32.43-3.59v-15.09h6.75v16.26c0,2-.35,3.89-1.04,5.64-.7,1.76-1.69,3.3-2.98,4.63-1.29,1.33-2.82,2.37-4.6,3.13s-3.77,1.14-5.98,1.14-4.2-.38-5.98-1.14c-1.78-.76-3.31-1.8-4.6-3.13-1.29-1.33-2.28-2.87-2.98-4.63-.7-1.76-1.04-3.64-1.04-5.64Z"/><path class="cls-1" d="M90.99,42.95v-17.18c0-2-.5-3.69-1.5-5.06-1-1.37-2.59-2.06-4.75-2.06-1.84,0-3.33.57-4.48,1.72-1.15,1.15-1.72,2.94-1.72,5.4v17.18h-6.81v-17.12c0-2.09.36-3.98,1.07-5.67.72-1.7,1.67-3.14,2.85-4.33,1.19-1.19,2.55-2.11,4.08-2.76,1.53-.65,3.1-.98,4.69-.98,2.04,0,3.91.36,5.58,1.07,1.68.72,3.13,1.91,4.36,3.59,1.23-1.68,2.68-2.87,4.36-3.59,1.68-.72,3.54-1.07,5.58-1.07,1.6,0,3.16.33,4.69.98,1.53.65,2.89,1.57,4.08,2.76,1.19,1.19,2.14,2.63,2.85,4.33.71,1.7,1.07,3.59,1.07,5.67v17.12h-6.81v-17.18c0-2.45-.57-4.25-1.72-5.4-1.15-1.14-2.64-1.72-4.48-1.72-2.17,0-3.75.69-4.75,2.06-1,1.37-1.5,3.06-1.5,5.06v17.18h-6.75Z"/><path class="cls-1" d="M119.68,0h6.75v13.01h7.85c2.74,0,5.14.4,7.21,1.2,2.06.8,3.79,1.89,5.18,3.28,1.39,1.39,2.43,3.03,3.13,4.91.7,1.88,1.04,3.89,1.04,6.01,0,2.25-.4,4.32-1.2,6.2-.8,1.88-1.89,3.51-3.28,4.88-1.39,1.37-3.04,2.44-4.94,3.22-1.9.78-3.96,1.17-6.17,1.17s-4.26-.39-6.17-1.17c-1.9-.78-3.55-1.85-4.94-3.22-1.39-1.37-2.48-3-3.28-4.88-.8-1.88-1.2-3.95-1.2-6.2V0ZM126.43,27.85c0,1.27.2,2.48.61,3.62.41,1.15.99,2.15,1.75,3.01.76.86,1.68,1.54,2.76,2.06,1.08.51,2.3.77,3.65.77s2.5-.22,3.59-.67c1.08-.45,2.01-1.06,2.79-1.84.78-.78,1.39-1.72,1.84-2.82.45-1.1.67-2.29.67-3.56s-.21-2.38-.61-3.47c-.41-1.08-1.03-2.02-1.87-2.82-.84-.8-1.87-1.42-3.1-1.87-1.23-.45-2.66-.67-4.29-.67h-3.02c-2.64,0-4.77,2.14-4.77,4.77v3.51Z"/><path class="cls-1" d="M181.6,38.65c-1.8,1.8-3.8,3.12-6.01,3.96-2.21.84-4.58,1.26-7.12,1.26-2.29,0-4.39-.4-6.29-1.2-1.9-.8-3.54-1.9-4.91-3.31-1.37-1.41-2.43-3.08-3.19-5-.76-1.92-1.14-4.03-1.14-6.32s.39-4.28,1.17-6.23c.78-1.94,1.85-3.63,3.22-5.06,1.37-1.43,3.01-2.56,4.91-3.37,1.9-.82,3.98-1.23,6.23-1.23,3.27,0,6.19.84,8.74,2.52,2.56,1.68,4.43,4.05,5.61,7.12.53,1.31.86,2.54.98,3.68,0,.01,0,.02,0,.04.27,2.71-1.88,5.06-4.6,5.06h-18.96c.08,1.1.36,2.09.83,2.94.47.86,1.07,1.6,1.81,2.21.74.61,1.6,1.07,2.58,1.38s1.98.46,3.01.46c1.76,0,3.37-.27,4.85-.8,1.47-.53,2.86-1.39,4.17-2.58l4.11,4.48ZM176.94,24.72c-.12-1.06-.45-1.99-.98-2.79-.53-.8-1.19-1.47-1.96-2.02-.78-.55-1.65-.97-2.61-1.26-.96-.29-1.93-.43-2.91-.43s-1.93.15-2.85.46c-.92.31-1.76.74-2.51,1.29-.76.55-1.39,1.24-1.9,2.06-.51.82-.83,1.72-.95,2.7h16.69Z"/><path class="cls-1" d="M186.2,28.04c0-2.45.38-4.62,1.14-6.5.76-1.88,1.83-3.46,3.22-4.72,1.39-1.27,3.06-2.22,5-2.85,1.94-.63,4.1-.95,6.47-.95v6.56c-2.7,0-4.89.69-6.56,2.06-1.68,1.37-2.51,3.47-2.51,6.29v15.03h-6.75v-14.91Z"/></g><path class="cls-1" d="M202.03,7.17c0-.6.11-1.16.32-1.68s.51-.98.88-1.38c.38-.39.84-.7,1.38-.94.54-.23,1.14-.35,1.8-.35s1.24.12,1.78.35c.54.23,1.01.55,1.39.94.39.39.69.85.9,1.38.22.53.32,1.09.32,1.68s-.11,1.15-.32,1.67c-.22.52-.52.98-.9,1.38-.39.4-.85.71-1.39.94-.54.23-1.14.34-1.78.34s-1.27-.11-1.8-.34c-.54-.23-1-.54-1.38-.94-.38-.4-.67-.86-.88-1.38-.21-.52-.32-1.08-.32-1.67ZM202.98,7.17c0,.5.08.97.25,1.39.16.43.39.79.69,1.1.3.31.66.55,1.09.73.43.18.9.26,1.41.26s.98-.09,1.41-.26c.43-.18.79-.42,1.1-.73.3-.31.54-.68.7-1.1.16-.43.25-.89.25-1.39s-.08-.97-.25-1.39c-.16-.43-.4-.8-.7-1.11-.3-.32-.67-.56-1.1-.74-.43-.18-.9-.26-1.41-.26s-.98.09-1.41.26c-.43.18-.79.42-1.09.74-.3.32-.53.69-.69,1.11-.16.43-.25.89-.25,1.39ZM205.89,7.63v1.42c-.12.02-.27.04-.46.04-.14,0-.25-.02-.33-.07-.08-.05-.12-.16-.12-.33v-3.24c0-.16.13-.27.4-.32.16-.04.31-.06.45-.07.13-.01.28-.02.45-.02.56,0,1,.11,1.31.34.32.23.47.55.47.97,0,.3-.08.55-.25.75-.17.2-.38.34-.64.42l1.02,1.23c-.02.09-.08.18-.18.25-.09.07-.2.11-.33.11-.21,0-.4-.12-.56-.35l-.77-1.12h-.46ZM206.45,6.93c.44,0,.67-.2.67-.61,0-.18-.07-.31-.21-.41-.14-.1-.33-.15-.56-.15-.08,0-.16,0-.24,0-.08,0-.15.01-.22.03v1.14h.56Z"/></g></g></svg>
+        </span>
+      </div>
+    </section>
+
+    <!-- ===================== STATEMENT ===================== -->
+    <section class="section statement" id="approach">
+      <div class="wrap statement__inner">
+        <p class="label reveal">Creative as Targeting</p>
+        <h2 class="statement__lead reveal">
+          Better Meta performance starts with better creative.
+        </h2>
+        <p class="statement__body reveal">
+          We study customers and learn what resonates through iterative creative testing.
+          The result is stronger campaigns, lower acquisition costs, and a better experience
+          for your customers.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="section process" id="process">
+      <div class="wrap">
+        <header class="process__head">
+          <p class="label reveal">Method</p>
+          <h2 class="process__lead reveal">
+            We help brands understand what customers respond to.
+            <span>Then we turn those insights into better Meta ads.</span>
+          </h2>
+        </header>
+
+        <ol class="steps" id="steps">
+          <span class="steps__rail" aria-hidden="true"><span class="steps__fill" id="stepsFill"></span></span>
+
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <div class="step__main">
+              <h3 class="step__title">Research</h3>
+              <ul class="step__list">
+                <li>Reviews</li>
+                <li>Conversations</li>
+                <li>Surveys</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <div class="step__main">
+              <h3 class="step__title">Develop</h3>
+              <ul class="step__list">
+                <li>Messaging</li>
+                <li>Audiences</li>
+                <li>Hypotheses</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <div class="step__main">
+              <h3 class="step__title">Create</h3>
+              <ul class="step__list">
+                <li>UGC</li>
+                <li>High production</li>
+                <li>Statics</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <div class="step__main">
+              <h3 class="step__title">Test</h3>
+              <ul class="step__list">
+                <li>Launch</li>
+                <li>Analyze</li>
+                <li>Learn</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="step reveal">
+            <span class="step__num">05</span>
+            <div class="step__main">
+              <h3 class="step__title">Iterate</h3>
+              <ul class="step__list">
+                <li>Refine</li>
+                <li>Expand</li>
+                <li>Repeat</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <p class="process__close reveal">
+          The longer we work together, the more we learn about your customers&mdash;and the
+          stronger creative becomes.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== CASE STUDIES ===================== -->
+    <section class="section work" id="work">
+      <div class="wrap">
+        <header class="work__head">
+          <div>
+            <p class="eyebrow reveal">Selected work</p>
+            <h2 class="section__title reveal">Case studies</h2>
+          </div>
+          <p class="work__intro lede reveal">
+            See how research, testing, and iteration informed campaigns for brands across
+            ecommerce and healthcare.
+          </p>
+        </header>
+
+        <div class="work__list">
+          <article class="study reveal">
+            <span class="study__index">01</span>
+            <div class="study__body">
+              <div class="study__meta">
+                <span class="study__sector">Ecommerce</span>
+                <span class="study__dot" aria-hidden="true"></span>
+                <span class="study__detail">Perfectly Snug</span>
+              </div>
+              <h3 class="study__title">
+                From $1M a Year to $1M a Month.
+              </h3>
+              <p class="study__excerpt">
+                How building a diverse creative ecosystem helped Perfectly Snug scale
+                aggressively while reducing acquisition costs.
+              </p>
+              <a href="perfectly-snug.html" class="study__link"><span class="study__link-label">Read the case study</span><span class="study__arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+            <figure class="study__media">
+              <div class="study__media-frame">
+                <img class="study__poster" src="case-studies/PS.png" alt="Perfectly Snug ad creative preview" width="550" height="979" loading="lazy" decoding="async" />
+                <video class="study__video" data-src="case-studies/PS.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+              </div>
+              <figcaption class="study__media-label"><span class="study__media-play" aria-hidden="true"></span>Preview ad</figcaption>
+            </figure>
+          </article>
+
+          <article class="study reveal">
+            <span class="study__index">02</span>
+            <div class="study__body">
+              <div class="study__meta">
+                <span class="study__sector">Healthcare</span>
+                <span class="study__dot" aria-hidden="true"></span>
+                <span class="study__detail">Dove Dental</span>
+              </div>
+              <h3 class="study__title">
+                Turning Customer Conversations Into a Competitive Advantage.
+              </h3>
+              <p class="study__excerpt">
+                Through interviews and surveys with more than 300 dental professionals, we
+                uncovered the insights that shaped product positioning, advertising, and
+                marketing strategy.
+              </p>
+              <a href="dove-dental.html" class="study__link"><span class="study__link-label">Read the case study</span><span class="study__arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+            <figure class="study__media">
+              <div class="study__media-frame">
+                <img class="study__poster" src="case-studies/DD.png" alt="Dove Dental ad creative preview" width="531" height="950" loading="lazy" decoding="async" />
+                <video class="study__video" data-src="case-studies/DD.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+              </div>
+              <figcaption class="study__media-label"><span class="study__media-play" aria-hidden="true"></span>Preview ad</figcaption>
+            </figure>
+          </article>
+
+          <article class="study reveal">
+            <span class="study__index">03</span>
+            <div class="study__body">
+              <div class="study__meta">
+                <span class="study__sector">Ecommerce</span>
+                <span class="study__dot" aria-hidden="true"></span>
+                <span class="study__detail">Article Furniture</span>
+              </div>
+              <h3 class="study__title">
+                A GTM Plan for Testing a New Furniture Category.
+              </h3>
+              <p class="study__excerpt">
+                How customer research and creative testing helped Article validate demand for a
+                subscription furniture model before committing to national expansion.
+              </p>
+              <a href="article-furniture.html" class="study__link"><span class="study__link-label">Read the case study</span><span class="study__arrow" aria-hidden="true">&rarr;</span></a>
+            </div>
+            <figure class="study__media">
+              <div class="study__media-frame">
+                <img class="study__poster" src="case-studies/AF.png" alt="Article Furniture ad creative preview" width="533" height="952" loading="lazy" decoding="async" />
+                <video class="study__video" data-src="case-studies/AF.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+              </div>
+              <figcaption class="study__media-label"><span class="study__media-play" aria-hidden="true"></span>Preview ad</figcaption>
+            </figure>
+          </article>
+        </div>
+
+        <div class="work__cta reveal">
+          <a href="case-studies.html" class="cta"><span class="cta__label">View all case studies</span><span class="cta__arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOUNDER ===================== -->
+    <section class="section founder" id="founder">
+      <div class="wrap founder__inner">
+        <div class="founder__aside">
+          <p class="label reveal">Founder</p>
+          <div class="founder__portrait reveal">
+            <img class="founder__photo" src="leah-mazur.jpg" alt="Leah, founder of Carousel Creative" width="640" height="800" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <div class="founder__body">
+          <h2 class="founder__lead reveal">Meet Leah.</h2>
+          <div class="founder__copy">
+            <p class="reveal">
+              I started my career analyzing advertising data at Canada&rsquo;s largest Facebook
+              advertiser.
+            </p>
+            <p class="reveal">In 2017, I founded Carousel Creative.</p>
+            <p class="reveal">
+              Today, I help brands improve Meta performance through customer research, creative
+              strategy, production, and media buying.
+            </p>
+            <p class="reveal">
+              I studied Psychology before moving into advertising, and I&rsquo;ve spent the last
+              decade exploring how people make decisions, and how those insights can lead to
+              better creative.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section tstm" id="testimonials" aria-roledescription="testimonial slider" aria-label="Client testimonials">
+      <div class="wrap">
+        <header class="tstm__head">
+          <p class="label reveal">In their words</p>
+          <div class="tstm__controls reveal" role="group" aria-label="Testimonial navigation">
+            <button class="tstm__nav tstm__nav--prev" type="button" aria-label="Previous testimonials">
+              <span aria-hidden="true">&larr;</span>
+            </button>
+            <span class="tstm__progress" aria-live="polite">01&thinsp;/&thinsp;03</span>
+            <button class="tstm__nav tstm__nav--next" type="button" aria-label="Next testimonials">
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+          </div>
+        </header>
+
+        <div class="tstm__viewport">
+          <ul class="tstm__list">
+            <li class="tstm__item" data-name="Tia Aoake" data-title="Product Manager" data-company="Article Furniture">
+              <blockquote class="tstm__pull">Her deep knowledge of the ever-changing social advertising space has been critical to our early success.</blockquote>
+              <p class="tstm__by">
+                <span class="tstm__name">Tia Aoake</span>
+                <span class="tstm__sep" aria-hidden="true">&middot;</span>
+                <span class="tstm__co">Article Furniture</span>
+              </p>
+              <button class="tstm__more" type="button">
+                <span class="tstm__more-label">Read full testimonial</span>
+                <span class="tstm__more-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <template>
+                <p>Leah has been critical to launching our recent venture and gaining traction while balancing the needs of our brand with the reality of the market.</p>
+                <p>She has a unique ability to bring new concepts to life quickly while being collaborative and iterative.</p>
+                <p>Her deep knowledge of the ever-changing social advertising space has been critical to our early success and I&rsquo;ve learned so many lessons the easy way because of it.</p>
+              </template>
+            </li>
+
+            <li class="tstm__item" data-name="Ryan Sullivan" data-title="Marketing Manager" data-company="Stay22">
+              <blockquote class="tstm__pull">She has a unique way of helping her clients find solutions while empowering them to keep pushing the needle.</blockquote>
+              <p class="tstm__by">
+                <span class="tstm__name">Ryan Sullivan</span>
+                <span class="tstm__sep" aria-hidden="true">&middot;</span>
+                <span class="tstm__co">Stay22</span>
+              </p>
+              <button class="tstm__more" type="button">
+                <span class="tstm__more-label">Read full testimonial</span>
+                <span class="tstm__more-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <template>
+                <p>You can tell there is a sincerity to mastering her craft which is inspiring and contagious.</p>
+                <p>Her paid ads knowledge and expertise shines through in all phases including strategy, creative, deployment, optimization and reporting.</p>
+                <p>If something isn&rsquo;t working, there are no tears over spilled milk. She has a unique way of helping her clients find solutions while empowering them to keep pushing the needle and keep their head in the game.</p>
+              </template>
+            </li>
+
+            <li class="tstm__item" data-name="Ryan Thomas" data-title="Founder / CRO" data-company="Koalatative">
+              <blockquote class="tstm__pull">Without her, we would have been completely in the dark about what to test and how to scale.</blockquote>
+              <p class="tstm__by">
+                <span class="tstm__name">Ryan Thomas</span>
+                <span class="tstm__sep" aria-hidden="true">&middot;</span>
+                <span class="tstm__co">Koalatative</span>
+              </p>
+              <button class="tstm__more" type="button">
+                <span class="tstm__more-label">Read full testimonial</span>
+                <span class="tstm__more-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <template>
+                <p>[Leah&rsquo;s] knowledge of and strategy for different platforms, the continual testing of different hooks and messaging angles, editing raw footage we had on hand into professional video ad content with a UGC feel, managing the process of hiring actors and filming new content, testing different types of offers ranging from free samples to direct orders, and trying out different ad and CTA formats like Messenger campaigns are all things that we would have been completely in the dark about without her.</p>
+                <p>I&rsquo;ll definitely be looking for more opportunities to work with Leah and can&rsquo;t recommend her enough.</p>
+              </template>
+            </li>
+
+            <li class="tstm__item" data-name="Simon Hasan" data-title="Founder" data-company="SHD Games">
+              <blockquote class="tstm__pull">I hand it off and she takes care of it. It&rsquo;s been a great partnership.</blockquote>
+              <p class="tstm__by">
+                <span class="tstm__name">Simon Hasan</span>
+                <span class="tstm__sep" aria-hidden="true">&middot;</span>
+                <span class="tstm__co">SHD Games</span>
+              </p>
+              <button class="tstm__more" type="button">
+                <span class="tstm__more-label">Read full testimonial</span>
+                <span class="tstm__more-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <template>
+                <p>The beautiful thing is that I don&rsquo;t have to come up with the strategies and think of what we need to do. Leah has been on top of that.</p>
+                <p>She&rsquo;s taken my company in a very good direction. I&rsquo;m very happy with her leadership and her charge.</p>
+                <p>I hand it off and she takes care of it, it&rsquo;s been a great partnership. I look forward to working with Carousel and Leah for a long time.</p>
+              </template>
+            </li>
+
+            <li class="tstm__item" data-name="Shannon Peckford" data-title="Founder" data-company="Sourdough Schoolhouse">
+              <blockquote class="tstm__pull">We&rsquo;ve never paid for Leah because Leah has paid for herself many times over.</blockquote>
+              <p class="tstm__by">
+                <span class="tstm__name">Shannon Peckford</span>
+                <span class="tstm__sep" aria-hidden="true">&middot;</span>
+                <span class="tstm__co">Sourdough Schoolhouse</span>
+              </p>
+              <button class="tstm__more" type="button">
+                <span class="tstm__more-label">Read full testimonial</span>
+                <span class="tstm__more-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <template>
+                <p>We thought we could do it on our own. My husband has paid for over $10,000 of ads training but it&rsquo;s one of those things that you really need an expertise in.</p>
+                <p>Honestly we&rsquo;ve never paid for Leah because Leah has paid for herself many times over. I don&rsquo;t know what we&rsquo;d do without her. It&rsquo;s so nice for my own peace of mind to have someone who knows what they&rsquo;re doing.</p>
+                <p>I can go on and focus on the things that I do best and leave the rest to her. If you&rsquo;re thinking about hiring [Carousel], go for it!</p>
+              </template>
+            </li>
+
+            <li class="tstm__item" data-name="David Thiessen" data-title="Founder / CEO" data-company="The Good Neighbour">
+              <blockquote class="tstm__pull">I haven&rsquo;t found anything that can match or compete with user acquisitions.</blockquote>
+              <p class="tstm__by">
+                <span class="tstm__name">David Thiessen</span>
+                <span class="tstm__sep" aria-hidden="true">&middot;</span>
+                <span class="tstm__co">The Good Neighbour</span>
+              </p>
+              <button class="tstm__more" type="button">
+                <span class="tstm__more-label">Read full testimonial</span>
+                <span class="tstm__more-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+              <template>
+                <p>Can&rsquo;t say enough good things about them. Carousel took my app to the next level. Without them it wouldn&rsquo;t be doing what it is now.</p>
+                <p>The way they target people is phenomenal. I haven&rsquo;t found anything that can match or compete with user acquisitions. Highly recommend them.</p>
+              </template>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIAL MODAL ===================== -->
+    <div class="tstm-modal" id="tstmModal" hidden role="dialog" aria-modal="true" aria-labelledby="tstmModalName">
+      <div class="tstm-modal__overlay" data-close></div>
+      <div class="tstm-modal__dialog" role="document">
+        <button class="tstm-modal__close" type="button" aria-label="Close testimonial" data-close>&times;</button>
+        <span class="tstm-modal__mark" aria-hidden="true">&ldquo;</span>
+        <div class="tstm-modal__body"></div>
+        <footer class="tstm-modal__by">
+          <p class="tstm-modal__name" id="tstmModalName"></p>
+          <p class="tstm-modal__title"></p>
+          <p class="tstm-modal__company"></p>
+        </footer>
+      </div>
+    </div>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="closing" id="contact">
+      <div class="closing__field" aria-hidden="true">
+        <svg class="closing__rings" id="closingRings" preserveAspectRatio="none"></svg>
+        <canvas class="closing__dots" id="closingDots"></canvas>
+        <svg class="closing__blobs" id="closingBlobs" preserveAspectRatio="none"></svg>
+        <div class="closing__veil"></div>
+      </div>
+      <div class="wrap closing__inner">
+        <h2 class="closing__title reveal">Let&rsquo;s get creative.</h2>
+        <a href="https://form.typeform.com/to/blMRAYgL" target="_blank" rel="noopener" class="cta cta--light reveal"><span class="cta__label">Request a Call</span><span class="cta__arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
+
+      <!-- footer dissolves into the same animated environment -->
+      <footer class="footer">
+        <div class="wrap footer__inner">
+          <p class="footer__copy">&copy; 2026 Carousel Creative</p>
+          <ul class="footer__social">
+            <li><a class="footer__link" href="https://www.linkedin.com/in/leahmazur/" target="_blank" rel="noopener"><span class="footer__link-label">LinkedIn</span></a></li>
+            <li><a class="footer__link" href="https://www.instagram.com/adswithleah_" target="_blank" rel="noopener"><span class="footer__link-label">Instagram</span></a></li>
+            <li><a class="footer__link" href="https://www.tiktok.com/@adswithleah" target="_blank" rel="noopener"><span class="footer__link-label">TikTok</span></a></li>
+          </ul>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <!-- discreet comparison switcher (remove before launch) -->
+  <a href="index.html" class="switch" title="Compare with Design A">Design A</a>
+
+  <script src="js/main-b.js"></script>
+</body>
+</html>
