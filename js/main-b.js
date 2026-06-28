@@ -170,7 +170,7 @@
     rings.setAttribute("viewBox", "0 0 " + W + " " + H);
     var s = "";
     for (var i = 0; i < radii.length; i++) {
-      var op = Math.max(0.05, 0.15 - i * 0.0025);
+      var op = Math.max(0.08, 0.21 - i * 0.0025);
       s += '<circle cx="' + focal.x.toFixed(1) + '" cy="' + focal.y.toFixed(1) +
            '" r="' + radii[i].toFixed(1) +
            '" fill="none" stroke="rgba(126,64,59,' + op.toFixed(3) +
