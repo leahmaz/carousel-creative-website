@@ -1568,3 +1568,333 @@ body.cs-modal-open { overflow: hidden; }
   .cs-stats { gap: 1.8rem 2.4rem; }
   .cs-modal__close { top: -8px; right: 0; }
 }
+
+/* ============================================================
+   LEAD MAGNET / LANDING (customer-research-canvas.html)
+   ============================================================ */
+
+/* keep the nav CTA on a single line at narrow widths */
+.nav__cta { flex: none; }
+.nav__cta .cta__label { white-space: nowrap; }
+/* on the landing page, drop the wordmark on small screens so the logo
+   mark + CTA share the header comfortably */
+@media (max-width: 560px) {
+  .lm-page .nav__brand-text { display: none; }
+}
+
+/* ---- hero: offer copy + form card over the research field ---- */
+.lm-hero {
+  min-height: auto;
+  justify-content: flex-start;
+  padding-top: clamp(48px, 9vh, 104px);
+  padding-bottom: clamp(56px, 9vh, 120px);
+}
+.lm-hero__inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(40px, 5vw, 88px);
+  align-items: center;
+  width: 100%;
+}
+.lm-hero__copy { max-width: 48ch; }
+.lm-hero .label { display: block; margin-bottom: clamp(20px, 3vh, 30px); }
+.lm-hero__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.3rem, 5.2vw, 4.3rem);
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin-bottom: clamp(20px, 3vh, 30px);
+}
+.lm-hero__lede {
+  font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+  line-height: 1.58;
+  color: var(--ink-soft);
+  margin-bottom: clamp(24px, 3.5vh, 36px);
+}
+.lm-checklist { display: grid; gap: 0.85rem; margin-bottom: clamp(26px, 4vh, 38px); }
+.lm-checklist li {
+  position: relative;
+  padding-left: 1.9em;
+  font-size: clamp(0.98rem, 1.3vw, 1.1rem);
+  line-height: 1.45;
+  color: var(--ink);
+}
+.lm-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.18em;
+  width: 1.15em;
+  height: 1.15em;
+  border-radius: 50%;
+  background: var(--pop);
+  /* a cream checkmark, drawn with a mask so it inherits no extra assets */
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E") center / 0.78em no-repeat,
+          linear-gradient(#000, #000);
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' d='M5 12.5l4.5 4.5L19 7'/%3E%3C/svg%3E") center / 0.78em no-repeat;
+  /* knock the check out of the dot */
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.lm-hero__by {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* ---- form card ---- */
+.lm-card {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: clamp(26px, 3vw, 40px);
+  box-shadow: 0 40px 90px -54px rgba(58, 37, 33, 0.5);
+  scroll-margin-top: 100px;
+}
+.lm-card__head {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2vw, 22px);
+  padding-bottom: clamp(20px, 2.6vw, 28px);
+  margin-bottom: clamp(22px, 2.8vw, 30px);
+  border-bottom: 1px solid var(--line-soft);
+}
+/* mockup image of the printed canvas (has its own shadow + transparent bg) */
+.lm-card__cover {
+  flex: none;
+  width: 92px;
+  line-height: 0;
+}
+.lm-card__cover img { display: block; width: 100%; height: auto; }
+.lm-card__kicker {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pop);
+  margin-bottom: 0.6rem;
+}
+.lm-card__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.45rem;
+}
+.lm-card__sub { font-size: 0.95rem; line-height: 1.45; color: var(--ink-soft); }
+
+/* ---- fields ---- */
+.lm-form { display: grid; gap: clamp(14px, 1.8vw, 18px); }
+.lm-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 1.6vw, 16px);
+}
+.lm-field { display: grid; gap: 0.5rem; }
+.lm-field label {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.lm-field input {
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 0.82em 0.95em;
+  width: 100%;
+  transition: border-color .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
+}
+.lm-field input::placeholder { color: var(--ink-faint); }
+.lm-field input:hover { border-color: var(--ink-faint); }
+.lm-field input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: var(--paper-2);
+  box-shadow: 0 0 0 3px rgba(166, 83, 78, 0.14);
+}
+.lm-field input:user-invalid { border-color: var(--clay-2); }
+
+/* ---- submit / download button (solid, espresso → warm on hover) ---- */
+.lm-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  margin-top: 0.4rem;
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--ink);
+  border: 0;
+  border-radius: 10px;
+  padding: 1.05em 1.4em;
+  cursor: pointer;
+  transition: background .35s var(--ease), transform .2s var(--ease), opacity .25s var(--ease);
+}
+.lm-submit:hover, .lm-submit:focus-visible { background: var(--clay-1); }
+.lm-submit:active { transform: translateY(1px); }
+.lm-submit[disabled], .lm-submit.is-loading { opacity: 0.65; cursor: default; }
+.lm-submit__arrow { transition: transform .35s var(--ease); }
+.lm-submit:hover .lm-submit__arrow, .lm-submit:focus-visible .lm-submit__arrow { transform: translateX(3px); }
+.lm-submit--download:hover .lm-submit__arrow,
+.lm-submit--download:focus-visible .lm-submit__arrow { transform: translateY(3px); }
+
+.lm-form__note {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  text-align: center;
+}
+.lm-form__error {
+  font-size: 0.85rem;
+  color: var(--clay-2);
+  text-align: center;
+}
+
+/* ---- success state ---- */
+/* once submitted, the card collapses to the confirmation only */
+.lm-card.is-sent .lm-card__head,
+.lm-card.is-sent .lm-form { display: none; }
+.lm-success { text-align: center; padding: clamp(6px, 1vw, 12px) 0; }
+.lm-success__mark {
+  display: inline-grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--pop);
+  color: var(--paper-2);
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 1.1rem;
+}
+.lm-success__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  letter-spacing: -0.015em;
+  margin-bottom: 0.7rem;
+}
+.lm-success__text {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 34ch;
+  margin: 0 auto 1.6rem;
+}
+
+/* ---- "what's inside" ledger ---- */
+.lm-inside { border-top: 1px solid var(--line-soft); }
+.lm-inside__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(40px, 7vw, 110px);
+  align-items: start;
+}
+.lm-inside__aside { position: sticky; top: 120px; }
+.lm-inside__aside .label { display: block; margin-bottom: 1.4rem; }
+.lm-inside__lead {
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  line-height: 1.06;
+  letter-spacing: -0.018em;
+  margin-bottom: clamp(20px, 3vh, 30px);
+}
+.lm-inside__body {
+  font-size: clamp(1.02rem, 1.5vw, 1.2rem);
+  line-height: 1.58;
+  color: var(--ink-soft);
+  max-width: 42ch;
+}
+.lm-sections { border-top: 1px solid var(--line); }
+.lm-sec {
+  display: grid;
+  grid-template-columns: clamp(48px, 7vw, 84px) 1fr;
+  gap: clamp(16px, 3vw, 44px);
+  align-items: baseline;
+  padding-block: clamp(28px, 4.5vh, 44px);
+  border-bottom: 1px solid var(--line);
+}
+.lm-sec__num {
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  color: var(--clay-3);
+  letter-spacing: 0.04em;
+}
+.lm-sec__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.7rem;
+}
+.lm-sec__text {
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 52ch;
+}
+
+/* ---- CTA band: desk photo under a soft cream veil — jumps back to the form ---- */
+.lm-cta {
+  border-top: 1px solid var(--line-soft);
+  text-align: center;
+  padding-block: clamp(72px, 12vh, 130px);
+  background:
+    linear-gradient(rgba(251, 247, 244, 0.45), rgba(251, 247, 244, 0.45)),
+    url("../customer-research-canvas-desk.png") center / cover no-repeat;
+}
+.lm-cta__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(24px, 4vh, 38px);
+}
+.lm-cta__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.1rem, 5vw, 3.8rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  max-width: none;
+  text-wrap: balance;
+}
+.lm-cta__btn { width: auto; min-width: 260px; margin-top: 0; }
+.lm-cta__btn:hover .lm-submit__arrow,
+.lm-cta__btn:focus-visible .lm-submit__arrow { transform: translateY(-3px); }
+
+/* ---- footer on its own dark-espresso band ---- */
+.lm-footer {
+  background: #2A1B18;
+  padding-block: clamp(30px, 5vh, 54px);
+}
+
+/* ---- responsive ---- */
+@media (max-width: 900px) {
+  .lm-hero__inner { grid-template-columns: 1fr; gap: clamp(36px, 7vw, 56px); }
+  .lm-hero__copy { max-width: none; }
+  .lm-inside__grid { grid-template-columns: 1fr; gap: clamp(32px, 6vw, 48px); }
+  .lm-inside__aside { position: static; }
+}
+@media (max-width: 480px) {
+  .lm-card__head { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .lm-card__cover { width: 64px; }
+  .lm-field-row { grid-template-columns: 1fr; }
+  .lm-sec { grid-template-columns: 1fr; gap: 0.5rem; }
+}
