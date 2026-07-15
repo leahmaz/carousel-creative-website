@@ -896,3 +896,139 @@
     });
   });
 })();
+
+/* ============================================================
+   REEL — homepage portfolio marquee
+   Duplicates the card group for a seamless CSS loop, lazily
+   attaches video sources when the reel nears the viewport,
+   silently previews a clip on hover, and opens it (with sound
+   + controls) in a cs-modal lightbox on click.
+   ============================================================ */
+(function () {
+  "use strict";
+
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var marquee = document.getElementById("reelMarquee");
+  if (!marquee) return;
+
+  var track = marquee.querySelector(".reel__track");
+  var group = track.querySelector(".reel__group");
+  if (!track || !group) return;
+
+  /* ---------- seamless loop: decorative duplicate of the group ---------- */
+  if (!reduce) {
+    var clone = group.cloneNode(true);
+    clone.classList.add("reel__group--clone");
+    clone.setAttribute("aria-hidden", "true");
+    Array.prototype.forEach.call(clone.querySelectorAll(".reel-card"), function (btn) {
+      btn.tabIndex = -1;
+    });
+    track.appendChild(clone);
+  }
+
+  var cards = Array.prototype.slice.call(track.querySelectorAll(".reel-card"));
+
+  /* ---------- lazy source loading (first frame as the still) ---------- */
+  var sourcesLoaded = false;
+  function loadSources() {
+    if (sourcesLoaded) return;
+    sourcesLoaded = true;
+    cards.forEach(function (card) {
+      var v = card.querySelector("video");
+      if (!v) return;
+      v.preload = "metadata";
+      v.src = card.getAttribute("data-src") + "#t=0.1";
+    });
+  }
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        loadSources();
+        obs.disconnect();
+      });
+    }, { rootMargin: "600px 0px" });
+    io.observe(marquee);
+  } else {
+    loadSources();
+  }
+
+  /* ---------- hover / focus: silent inline preview ---------- */
+  cards.forEach(function (card) {
+    var video = card.querySelector("video");
+    if (!video) return;
+
+    function start() {
+      loadSources();
+      video.muted = true;
+      video.playsInline = true;
+      var p = video.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+    function stop() {
+      try { video.pause(); video.currentTime = 0.1; } catch (e) {}
+    }
+
+    card.addEventListener("mouseenter", start);
+    card.addEventListener("mouseleave", stop);
+    card.addEventListener("focus", start);
+    card.addEventListener("blur", stop);
+  });
+
+  /* ---------- lightbox (markup + behavior mirror case-study.js) ---------- */
+  var modal = document.createElement("div");
+  modal.className = "cs-modal";
+  modal.hidden = true;
+  modal.innerHTML =
+    '<div class="cs-modal__overlay" data-close></div>' +
+    '<div class="cs-modal__dialog" role="dialog" aria-modal="true" aria-label="Ad creative">' +
+      '<button class="cs-modal__close" type="button" aria-label="Close video" data-close>&times;</button>' +
+      '<div class="cs-modal__stage"></div>' +
+    "</div>";
+  document.body.appendChild(modal);
+
+  var stage = modal.querySelector(".cs-modal__stage");
+  var closeBtn = modal.querySelector(".cs-modal__close");
+  var lastFocused = null;
+
+  function openModal(url) {
+    lastFocused = document.activeElement;
+    stage.innerHTML = "";
+    var v = document.createElement("video");
+    v.src = url;
+    v.controls = true;
+    v.autoplay = true;
+    v.playsInline = true;
+    v.preload = "auto";
+    stage.appendChild(v);
+
+    modal.hidden = false;
+    document.body.classList.add("cs-modal-open");
+    var p = v.play();
+    if (p && p.catch) p.catch(function () {});
+    closeBtn.focus();
+  }
+
+  function closeModal() {
+    var v = stage.querySelector("video");
+    if (v) { v.pause(); v.removeAttribute("src"); v.load(); }
+    stage.innerHTML = "";
+    modal.hidden = true;
+    document.body.classList.remove("cs-modal-open");
+    if (lastFocused && lastFocused.focus) lastFocused.focus();
+  }
+
+  track.addEventListener("click", function (e) {
+    var card = e.target.closest(".reel-card");
+    if (!card) return;
+    openModal(card.getAttribute("data-src"));
+  });
+
+  modal.addEventListener("click", function (e) {
+    if (e.target.hasAttribute("data-close")) closeModal();
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modal.hidden) closeModal();
+  });
+})();

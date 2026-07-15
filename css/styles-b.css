@@ -2030,3 +2030,155 @@ body.cs-modal-open { overflow: hidden; }
   .cn-portrait { width: 108px; height: 108px; }
   .cn-link { padding: 14px 16px; }
 }
+
+/* ============================================================
+   REEL — homepage portfolio marquee (index.html)
+   A slow horizontal loop of ad creatives between the client
+   logos and the statement section. Hover pauses the loop and
+   silently previews the clip; click opens it in the cs-modal
+   lightbox (styles shared with the case-study pages).
+   ============================================================ */
+.reel {
+  --reel-gap: clamp(14px, 2vw, 24px);
+  padding-block: clamp(48px, 9vh, 112px) 0;
+  overflow: hidden;
+}
+.reel__head { margin-bottom: clamp(20px, 4vh, 36px); }
+
+.reel__marquee { position: relative; }
+/* soft edge fades so cards emerge from / dissolve into the page */
+.reel__marquee::before,
+.reel__marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(24px, 6vw, 90px);
+  z-index: 2;
+  pointer-events: none;
+}
+.reel__marquee::before { left: 0; background: linear-gradient(to right, var(--paper), transparent); }
+.reel__marquee::after { right: 0; background: linear-gradient(to left, var(--paper), transparent); }
+
+.reel__track {
+  display: flex;
+  width: max-content;
+  animation: reel-scroll 80s linear infinite;
+}
+@keyframes reel-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+/* hovering (or keyboard-focusing) a card stops the loop. Plain
+   :focus-within would also match after a mouse click (focus is
+   returned to the card when the modal closes), freezing the strip
+   permanently — so only visible keyboard focus pauses it. */
+.reel__marquee:hover .reel__track { animation-play-state: paused; }
+.reel__marquee:has(.reel-card:focus-visible) .reel__track { animation-play-state: paused; }
+
+.reel__group {
+  display: flex;
+  gap: var(--reel-gap);
+  padding-right: var(--reel-gap);
+}
+
+.reel-card {
+  display: block;
+  flex: 0 0 auto;
+  width: clamp(168px, 18vw, 244px);
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.reel-card__frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--shell);
+  box-shadow: 0 18px 42px -28px rgba(58, 37, 33, 0.5);
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.reel-card video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.reel-card__brand {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 1;
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #FBF7F4;
+  background: rgba(28, 18, 16, 0.55);
+  padding: 0.4em 0.9em;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.reel-card:hover .reel-card__frame,
+.reel-card:focus-visible .reel-card__frame {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 54px -28px rgba(58, 37, 33, 0.55);
+}
+.reel-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 14px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reel__track { animation: none; }
+  .reel__marquee { overflow-x: auto; }
+  .reel__group--clone { display: none; }
+}
+
+/* ============================================================
+   CS-TESTIMONIAL — client quote card on case-study pages
+   ============================================================ */
+.cs-testimonial {
+  position: relative;
+  margin: clamp(40px, 7vh, 72px) 0 0;
+  padding: clamp(30px, 5vw, 48px) clamp(26px, 4.5vw, 46px) clamp(24px, 4vw, 38px);
+  background: var(--paper-2);
+  border: 1px solid var(--line-soft);
+  border-radius: 16px;
+  box-shadow: 0 24px 48px -32px rgba(58, 37, 33, 0.35);
+}
+.cs-testimonial__mark {
+  position: absolute;
+  top: 4px;
+  left: 18px;
+  font-family: var(--serif);
+  font-size: clamp(3.4rem, 6vw, 5rem);
+  line-height: 1;
+  color: var(--clay-3);
+  opacity: 0.35;
+  pointer-events: none;
+}
+.cs-testimonial__quote { margin: 0; }
+.cs-testimonial__quote p {
+  font-family: var(--serif);
+  font-size: clamp(1.12rem, 1.8vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--ink);
+  margin: 0 0 0.9em;
+}
+.cs-testimonial__quote p:last-child { margin-bottom: 0; }
+.cs-testimonial__by {
+  margin-top: clamp(16px, 2.5vh, 22px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.55em;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+}
+.cs-testimonial__name { font-weight: 700; letter-spacing: 0.02em; color: var(--ink); }
+.cs-testimonial__sep { color: var(--ink-faint); }
+.cs-testimonial__co { color: var(--ink-soft); }
