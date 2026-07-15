@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Projects — Leah Mazur</title>
+  <meta name="description" content="A portfolio of AI-assisted products and tools designed and built by Leah Mazur." />
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <link rel="canonical" href="https://www.carouselcreative.com/ai-projects" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Carousel Creative" />
+  <meta property="og:title" content="AI Projects — Leah Mazur" />
+  <meta property="og:description" content="A portfolio of AI-assisted products and tools designed and built by Leah Mazur." />
+  <meta property="og:url" content="https://www.carouselcreative.com/ai-projects" />
+  <meta property="og:image" content="https://www.carouselcreative.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Projects — Leah Mazur" />
+  <meta name="twitter:description" content="A portfolio of AI-assisted products and tools designed and built by Leah Mazur." />
+  <meta name="twitter:image" content="https://www.carouselcreative.com/og-image.png" />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HH9P55KXR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2HH9P55KXR');
+  </script>
+
+  <link rel="stylesheet" href="css/styles-b.css" />
+
+  <style>
+    /* ============================================================
+       AI PROJECTS PORTFOLIO — page-scoped styles (aip-)
+       ============================================================ */
+    .aip-hero {
+      padding-block: clamp(72px, 12vh, 140px) clamp(40px, 7vh, 80px);
+    }
+    .aip-hero__title {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(2.4rem, 5.4vw, 4.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      margin: 0.9rem 0 1.2rem;
+      max-width: 15em;
+    }
+    .aip-hero__lede {
+      font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+      color: var(--ink-soft);
+      max-width: 34em;
+      margin: 0;
+    }
+
+    /* ---------- project sections ---------- */
+    .aip-project {
+      padding-block: clamp(56px, 9vh, 110px);
+      border-top: 1px solid var(--line-soft);
+    }
+    .aip-project__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      gap: clamp(2.2rem, 5vw, 5rem);
+      align-items: center;
+    }
+    .aip-project--flip .aip-project__grid {
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    }
+    .aip-project--flip .aip-project__grid > .aip-project__copy { order: 2; }
+    .aip-project--flip .aip-project__grid > .aip-project__media { order: 1; }
+
+    .aip-num {
+      font-family: var(--sans);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      color: var(--ink-faint);
+    }
+    .aip-project__title {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(1.7rem, 2.8vw, 2.35rem);
+      line-height: 1.14;
+      margin: 0.55rem 0 0.35rem;
+    }
+    .aip-project__sub {
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: clamp(1rem, 1.4vw, 1.1rem);
+      color: var(--accent);
+      margin: 0 0 1.1rem;
+    }
+    .aip-project__copy p {
+      color: var(--ink-soft);
+      margin: 0 0 1em;
+    }
+    .aip-project__copy p:last-of-type { margin-bottom: 0; }
+
+    /* meta: tool + date */
+    .aip-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 1.4rem;
+    }
+    .aip-tag {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--clay-1);
+      background: var(--shell);
+      border: 1px solid var(--line-soft);
+      border-radius: 999px;
+      padding: 0.42em 1em;
+    }
+    .aip-date {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      color: var(--ink-faint);
+    }
+
+    /* results list */
+    .aip-results {
+      margin: 1.3rem 0 0;
+      padding: 1.1rem 1.3rem;
+      background: var(--paper-2);
+      border: 1px solid var(--line-soft);
+      border-radius: 14px;
+    }
+    .aip-results__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.55rem;
+    }
+    .aip-results__label {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--pop);
+      margin: 0 0 0.2rem;
+    }
+    .aip-results li {
+      position: relative;
+      padding-left: 1.4em;
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+    }
+    .aip-results li::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* button */
+    .aip-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6em;
+      margin-top: 1.5rem;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--paper);
+      background: var(--ink);
+      border-radius: 10px;
+      padding: 0.95em 1.5em;
+      transition: background .35s var(--ease), transform .2s var(--ease);
+    }
+    .aip-btn:hover, .aip-btn:focus-visible {
+      background: var(--clay-1);
+      transform: translateY(-1px);
+    }
+    .aip-btn__arrow { transition: transform .35s var(--ease); }
+    .aip-btn:hover .aip-btn__arrow,
+    .aip-btn:focus-visible .aip-btn__arrow { transform: translateX(4px); }
+
+    /* ---------- media treatments ---------- */
+    .aip-shot {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid var(--line-soft);
+      box-shadow: 0 18px 44px -22px rgba(58, 37, 33, 0.35);
+      background: var(--paper-2);
+    }
+    .aip-media--stack {
+      display: grid;
+      gap: clamp(1rem, 2.4vw, 1.6rem);
+    }
+    .aip-media--duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(0.8rem, 2vw, 1.4rem);
+    }
+    .aip-media--duo .aip-shot--wide { grid-column: 1 / -1; }
+
+    /* single tall phone screenshot */
+    .aip-media--phone {
+      display: flex;
+      justify-content: center;
+    }
+    /* tall screenshot displayed as two side-by-side halves */
+    .aip-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(0.9rem, 2vw, 1.4rem);
+      width: 100%;
+      max-width: 580px;
+    }
+    .aip-split__half {
+      aspect-ratio: 500 / 869;
+      overflow: hidden;
+      border-radius: 26px;
+      border: 1px solid var(--line-soft);
+      box-shadow: 0 22px 48px -24px rgba(58, 37, 33, 0.4);
+      background: var(--paper-2);
+    }
+    .aip-split__half img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .aip-split__half--bottom img { transform: translateY(-50%); }
+    .aip-phone {
+      display: block;
+      width: min(290px, 72vw);
+      height: auto;
+      border-radius: 26px;
+      border: 1px solid var(--line-soft);
+      box-shadow: 0 22px 48px -24px rgba(58, 37, 33, 0.4);
+      background: var(--paper-2);
+    }
+
+    /* horizontal phone strip (CETA) */
+    .aip-phones {
+      display: flex;
+      gap: clamp(0.9rem, 2vw, 1.3rem);
+      overflow-x: auto;
+      padding: 0.5rem 0.25rem 1.1rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .aip-phones .aip-phone {
+      flex: 0 0 auto;
+      width: min(228px, 62vw);
+      scroll-snap-align: start;
+    }
+    .aip-phones::-webkit-scrollbar { height: 8px; }
+    .aip-phones::-webkit-scrollbar-track { background: var(--shell); border-radius: 999px; }
+    .aip-phones::-webkit-scrollbar-thumb { background: var(--ink-faint); border-radius: 999px; }
+    .aip-scroll-hint {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--ink-faint);
+      margin: 0.3rem 0 0;
+    }
+
+    /* footer: dark text on the light page background (base .footer
+       styles assume a dark backdrop) */
+    .aip-footer { border-top: 1px solid var(--line-soft); }
+    .aip-footer .footer__copy { color: var(--ink-soft); }
+    .aip-footer .footer__link { color: var(--ink-soft); }
+    .aip-footer .footer__link:hover,
+    .aip-footer .footer__link:focus-visible { color: var(--accent); }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 860px) {
+      .aip-project__grid { grid-template-columns: 1fr; }
+      .aip-project--flip .aip-project__grid > .aip-project__copy { order: 1; }
+      .aip-project--flip .aip-project__grid > .aip-project__media { order: 2; }
+      .aip-media--duo { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="https://www.carouselcreative.com" class="nav__brand" aria-label="Carousel Creative — home"><img class="nav__logo" src="carousel-logo.png" alt="" aria-hidden="true" width="505" height="530" decoding="async" /><span class="nav__brand-text">Carousel&nbsp;Creative</span></a>
+      <nav class="nav__right" aria-label="Primary">
+        <a href="mailto:leah@carouselcreative.com" class="cta nav__cta"><span class="cta__label">Get in touch</span><span class="cta__arrow" aria-hidden="true">&rarr;</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="aip-hero">
+      <div class="wrap">
+        <p class="label reveal">AI Portfolio &middot; Leah Mazur</p>
+        <h1 class="aip-hero__title reveal">Products I&rsquo;ve designed and built with AI.</h1>
+        <p class="aip-hero__lede reveal">
+          A collection of apps, tools, and websites I&rsquo;ve built with AI-assisted
+          development&mdash;from personal problem-solvers to a community platform with real users.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== 01 · SUNSCREENER ===================== -->
+    <section class="aip-project">
+      <div class="wrap aip-project__grid">
+        <div class="aip-project__copy reveal">
+          <p class="aip-num">01</p>
+          <h2 class="aip-project__title">Sunscreener</h2>
+          <p class="aip-project__sub">Personalized Sun Protection Recommendations</p>
+          <p>I kept asking ChatGPT some variation of the same question:</p>
+          <p>&ldquo;If I&rsquo;ll be walking for 45min and the UVI is 6, do I need to wear sunscreen?&rdquo;</p>
+          <p>So I built Sunscreener, a web app that quickly provides sun protection recommendations without having to pull up my weather app and then ask ChatGPT.</p>
+          <div class="aip-meta">
+            <span class="aip-tag">Claude Code</span>
+            <span class="aip-date">July 2026</span>
+          </div>
+          <a class="aip-btn" href="https://sunscreener-orpin.vercel.app/" target="_blank" rel="noopener">
+            <span>View the app</span>
+            <span class="aip-btn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+        <div class="aip-project__media aip-media--phone reveal">
+          <div class="aip-split">
+            <div class="aip-split__half">
+              <img src="ai-portfolio/sunscreener.png" alt="Sunscreener app — entering location and time details" width="500" height="1738" loading="lazy" decoding="async" />
+            </div>
+            <div class="aip-split__half aip-split__half--bottom">
+              <img src="ai-portfolio/sunscreener.png" alt="Sunscreener app — personalized sun protection recommendation" width="500" height="1738" loading="lazy" decoding="async" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 02 · HOUSE DECISION TOOL ===================== -->
+    <section class="aip-project aip-project--flip">
+      <div class="wrap aip-project__grid">
+        <div class="aip-project__copy reveal">
+          <p class="aip-num">02</p>
+          <h2 class="aip-project__title">AI-Assisted House Decision Tool</h2>
+          <p class="aip-project__sub">Turning a Complicated Life Decision into Structured Scenarios</p>
+          <p>I built a custom decision engine to help my partner and I navigate a complex housing decision involving renovations, debt, commuting, quality of life, and future financial goals.</p>
+          <p>The tool modeled multiple scenarios&mdash;from renovating to selling&mdash;and incorporated highly personal factors that don&rsquo;t fit neatly into a spreadsheet.</p>
+          <p>I enjoyed thinking through how to quantify things that aren&rsquo;t naturally quantifiable, like quality of life and personal priorities. This tool was able to make something that previously felt overwhelming much more clear.</p>
+          <div class="aip-meta">
+            <span class="aip-tag">Claude Code</span>
+            <span class="aip-date">July 2026</span>
+          </div>
+        </div>
+        <div class="aip-project__media reveal">
+          <img class="aip-shot" src="ai-portfolio/house-tool.png" alt="House decision tool comparing housing scenarios side by side" width="1586" height="992" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 03 · CAROUSEL CREATIVE WEBSITE ===================== -->
+    <section class="aip-project">
+      <div class="wrap aip-project__grid">
+        <div class="aip-project__copy reveal">
+          <p class="aip-num">03</p>
+          <h2 class="aip-project__title">Carousel Creative Website</h2>
+          <p class="aip-project__sub">Rebuilding My Agency Website with AI-Assisted Development</p>
+          <p>I rebuilt my agency website from scratch using Claude Code, GitHub, and Vercel to better reflect our positioning and showcase our work.</p>
+          <p>I intentionally spent a lot of time on custom animations and interactions because I wanted the site to feel crafted and bespoke&mdash;not like a generic AI-generated website.</p>
+          <div class="aip-meta">
+            <span class="aip-tag">Claude Code</span>
+            <span class="aip-date">June 2026</span>
+          </div>
+          <a class="aip-btn" href="https://www.carouselcreative.com" target="_blank" rel="noopener">
+            <span>Visit the site</span>
+            <span class="aip-btn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+        <div class="aip-project__media aip-media--stack reveal">
+          <img class="aip-shot" src="ai-portfolio/cc-homepage.png" alt="Carousel Creative website homepage" width="1087" height="638" loading="lazy" decoding="async" />
+          <img class="aip-shot" src="ai-portfolio/cc-case-study.png" alt="Carousel Creative case study page" width="1056" height="653" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 04 · LIFT CURIOUS ===================== -->
+    <section class="aip-project aip-project--flip">
+      <div class="wrap aip-project__grid">
+        <div class="aip-project__copy reveal">
+          <p class="aip-num">04</p>
+          <h2 class="aip-project__title">Lift Curious</h2>
+          <p class="aip-project__sub">A Community for Women New to Strength Training</p>
+          <p>I built Lift Curious because I wished something like it existed when I started lifting. The goal was to create a local community where women could connect, learn, find gym buddies, and feel less intimidated getting started.</p>
+          <p>I launched the platform publicly in Montreal and grew it to nearly 70 members through paid advertising and community outreach.</p>
+          <p>One of my favorite parts of this project has been seeing real people use something that started as a simple idea.</p>
+          <div class="aip-results">
+            <p class="aip-results__label">Results</p>
+            <ul class="aip-results__list">
+              <li>69 members since launching in June 2026</li>
+              <li>86% profile completion rate</li>
+              <li>Successfully launched and actively used by local members</li>
+            </ul>
+          </div>
+          <div class="aip-meta">
+            <span class="aip-tag">Replit</span>
+            <span class="aip-date">June 2026</span>
+          </div>
+          <a class="aip-btn" href="https://liftcurious.com" target="_blank" rel="noopener">
+            <span>Visit the site</span>
+            <span class="aip-btn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+        <div class="aip-project__media aip-media--duo reveal">
+          <img class="aip-shot aip-shot--wide" src="ai-portfolio/lift-curious-homepage.png" alt="Lift Curious community platform homepage" width="1113" height="655" loading="lazy" decoding="async" />
+          <img class="aip-shot" src="ai-portfolio/lift-curious-profile.png" alt="Lift Curious member profile page" width="1223" height="651" loading="lazy" decoding="async" />
+          <img class="aip-shot" src="ai-portfolio/lift-curious-community-data.png" alt="Lift Curious community breakdown showing neighbourhoods, experience levels, goals, and what members are looking for" width="1223" height="653" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 05 · CETA ===================== -->
+    <section class="aip-project">
+      <div class="wrap">
+        <div class="aip-project__grid">
+          <div class="aip-project__copy reveal">
+            <p class="aip-num">05</p>
+            <h2 class="aip-project__title">CETA</h2>
+            <p class="aip-project__sub">An AI-Powered Sprint Training Companion</p>
+            <p>I built CETA to solve a frustrating problem I had while doing sprint interval training. I was constantly switching between timers, heart rate apps, and ChatGPT to track recovery and get coaching recommendations.</p>
+            <p>The app combines interval timing, heart rate tracking, and AI-powered coaching into one experience.</p>
+            <p>This was the first project where I built something and then immediately took it to the gym and used it in a real workout. Running on the treadmill while using something I had built myself was an incredibly rewarding experience.</p>
+            <p>The current MVP is built in Replit, and I&rsquo;m now rebuilding it as a native iPhone app to support Bluetooth heart rate monitor integration.</p>
+            <div class="aip-meta">
+              <span class="aip-tag">Replit</span>
+              <span class="aip-date">May 2026</span>
+            </div>
+            <a class="aip-btn" href="https://sprint-coach.replit.app/" target="_blank" rel="noopener">
+              <span>View the app</span>
+              <span class="aip-btn__arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+          <div class="aip-project__media reveal">
+            <div class="aip-phones" tabindex="0" aria-label="CETA app screenshots — scroll horizontally to see more">
+              <img class="aip-phone" src="ai-portfolio/ceta-session-plan.PNG" alt="CETA session plan screen" width="1290" height="2382" loading="lazy" decoding="async" />
+              <img class="aip-phone" src="ai-portfolio/ceta-sprint-interval.PNG" alt="CETA sprint interval timer screen" width="1290" height="2144" loading="lazy" decoding="async" />
+              <img class="aip-phone" src="ai-portfolio/ceta-post-interval-data.jpg" alt="CETA post-interval data and recovery screen" width="1290" height="2399" loading="lazy" decoding="async" />
+              <img class="aip-phone" src="ai-portfolio/ceta-post-session-data.jpg" alt="CETA post-session summary screen" width="1290" height="2361" loading="lazy" decoding="async" />
+              <img class="aip-phone" src="ai-portfolio/ceta-session-analytics.jpg" alt="CETA session analytics screen" width="1290" height="2513" loading="lazy" decoding="async" />
+            </div>
+            <p class="aip-scroll-hint" aria-hidden="true">Scroll to see more &rarr;</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 06 · PERSONAL HEALTH DASHBOARD ===================== -->
+    <section class="aip-project aip-project--flip">
+      <div class="wrap aip-project__grid">
+        <div class="aip-project__copy reveal">
+          <p class="aip-num">06</p>
+          <h2 class="aip-project__title">Personal Health Dashboard</h2>
+          <p class="aip-project__sub">6+ Years of My Life, Unified in One Place</p>
+          <p>I&rsquo;ve been tracking my habits, workouts, mood, and health data for over six years across Fitbit, Apple Health, Polar, ClassPass, and Daylio.</p>
+          <p>I built this dashboard to bring everything together in one place and consolidate.</p>
+          <p>I especially loved the challenge of combining messy data from multiple sources and turning it into something clean, connected, and useful. I made plenty of beginner mistakes along the way, but it taught me a lot about data modeling and visualization.</p>
+          <div class="aip-meta">
+            <span class="aip-tag">Replit</span>
+            <span class="aip-date">May 2026</span>
+          </div>
+        </div>
+        <div class="aip-project__media aip-media--duo reveal">
+          <img class="aip-shot aip-shot--wide" src="ai-portfolio/health-os-all-workouts.png" alt="Personal health dashboard showing all workouts over time" width="1062" height="629" loading="lazy" decoding="async" />
+          <img class="aip-shot" src="ai-portfolio/health-os-sprints.png" alt="Personal health dashboard sprint training view" width="1064" height="630" loading="lazy" decoding="async" />
+          <img class="aip-shot" src="ai-portfolio/health-os-training-diversity.png" alt="Personal health dashboard training diversity view" width="1065" height="630" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer aip-footer">
+      <div class="wrap footer__inner">
+        <p class="footer__copy">&copy; 2026 Carousel Creative</p>
+        <ul class="footer__social">
+          <li><a class="footer__link" href="https://www.linkedin.com/in/leahmazur/" target="_blank" rel="noopener"><span class="footer__link-label">LinkedIn</span></a></li>
+          <li><a class="footer__link" href="https://www.instagram.com/adswithleah_" target="_blank" rel="noopener"><span class="footer__link-label">Instagram</span></a></li>
+          <li><a class="footer__link" href="https://www.tiktok.com/@adswithleah" target="_blank" rel="noopener"><span class="footer__link-label">TikTok</span></a></li>
+        </ul>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/main-b.js"></script>
+</body>
+</html>
