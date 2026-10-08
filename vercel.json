@@ -2,6 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     { "source": "/connect", "destination": "/connect.html" },
-    { "source": "/ai-projects", "destination": "/ai-projects.html" }
+    { "source": "/ai-projects", "destination": "/ai-projects.html" },
+    { "source": "/adworldexperience", "destination": "/adworldexperience.html" },
+    { "source": "/vip-framework", "destination": "/vip-framework.html" }
   ]
 }

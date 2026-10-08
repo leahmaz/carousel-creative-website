@@ -1851,6 +1851,31 @@ body.cs-modal-open { overflow: hidden; }
   max-width: 52ch;
 }
 
+/* ---- How it works: three supporting points, even columns ---- */
+.lm-points { border-top: 1px solid var(--line-soft); }
+.lm-points .label { display: block; margin-bottom: clamp(28px, 4vh, 46px); }
+.lm-points__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+.lm-point { border-top: 1px solid var(--line); padding-top: clamp(20px, 3vh, 30px); }
+.lm-point__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.75rem;
+  text-wrap: balance;
+}
+.lm-point__text {
+  font-size: clamp(0.98rem, 1.2vw, 1.06rem);
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
 /* ---- CTA band: desk photo under a soft cream veil — jumps back to the form ---- */
 .lm-cta {
   border-top: 1px solid var(--line-soft);
@@ -1888,6 +1913,7 @@ body.cs-modal-open { overflow: hidden; }
 /* ---- responsive ---- */
 @media (max-width: 900px) {
   .lm-hero__inner { grid-template-columns: 1fr; gap: clamp(36px, 7vw, 56px); }
+  .lm-points__grid { grid-template-columns: 1fr; gap: clamp(22px, 4vw, 34px); }
   .lm-hero__copy { max-width: none; }
   .lm-inside__grid { grid-template-columns: 1fr; gap: clamp(32px, 6vw, 48px); }
   .lm-inside__aside { position: static; }
@@ -1983,6 +2009,95 @@ body.cs-modal-open { overflow: hidden; }
 }
 .cn-intro a:hover, .cn-intro a:focus-visible { color: var(--pop); text-decoration-color: currentColor; }
 
+/* Event badge — used by the event link-in-bio pages (adworldexperience.html) */
+.cn-badge {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 16px;
+  margin-bottom: 28px;
+  box-shadow: 0 14px 30px -24px rgba(58, 37, 33, 0.35);
+}
+
+/* Primary CTA — the reason the page exists (QR-code lead magnet).
+   Deliberately heavier than the .cn-link cards below it: filled dark
+   surface, larger type, its own button affordance. */
+.cn-cta {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 34px;
+  padding: 24px 24px 22px;
+  border-radius: 20px;
+  color: var(--paper);
+  background:
+    radial-gradient(120% 120% at 100% 0%, rgba(198, 131, 74, 0.45), transparent 60%),
+    linear-gradient(160deg, #4A2E29 0%, var(--ink) 55%, #2E1C19 100%);
+  box-shadow: 0 26px 48px -24px rgba(58, 37, 33, 0.75), inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.cn-cta:hover, .cn-cta:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 34px 58px -24px rgba(58, 37, 33, 0.8), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+.cn-cta:active { transform: translateY(-1px); }
+
+.cn-cta__kicker {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pop);
+  margin-bottom: 10px;
+}
+.cn-cta__title {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 6.2vw, 1.72rem);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  margin-bottom: 9px;
+}
+.cn-cta__sub {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(251, 247, 244, 0.72);
+  margin-bottom: 20px;
+}
+.cn-cta__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 52px;
+  padding: 13px 20px;
+  border-radius: 13px;
+  background: var(--pop);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background .3s var(--ease);
+}
+.cn-cta:hover .cn-cta__btn, .cn-cta:focus-visible .cn-cta__btn { background: #ffa94d; }
+.cn-cta__btn-icon { width: 19px; height: 19px; flex: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cn-cta { transition: none; }
+  .cn-cta:hover, .cn-cta:focus-visible { transform: none; }
+}
+
 .cn-links { display: grid; gap: 14px; width: 100%; }
 
 .cn-link {
@@ -2029,6 +2144,8 @@ body.cs-modal-open { overflow: hidden; }
 @media (max-width: 380px) {
   .cn-portrait { width: 108px; height: 108px; }
   .cn-link { padding: 14px 16px; }
+  .cn-badge { font-size: 0.66rem; letter-spacing: 0.14em; padding: 6px 13px; }
+  .cn-cta { padding: 21px 19px 19px; }
 }
 
 /* ============================================================
