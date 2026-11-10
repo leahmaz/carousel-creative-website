@@ -4,6 +4,7 @@
     { "source": "/connect", "destination": "/connect.html" },
     { "source": "/ai-projects", "destination": "/ai-projects.html" },
     { "source": "/adworldexperience", "destination": "/adworldexperience.html" },
-    { "source": "/vip-framework", "destination": "/vip-framework.html" }
+    { "source": "/vip-framework", "destination": "/vip-framework.html" },
+    { "source": "/tmm", "destination": "/tmm.html" }
   ]
 }
